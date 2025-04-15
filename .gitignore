@@ -1,0 +1,23 @@
+# Node.js dependencies
+# Ignores the node_modules directory where npm packages are stored
+node_modules/
+
+# Compiled TypeScript files
+# Ignores the 'dist' directory where the TypeScript output is stored
+dist/
+
+# VS Code settings and workspace configuration
+# Ignores VSCode specific files that are not necessary to track in Git
+.vscode/
+
+# Firebase Admin SDK JSON credentials file
+# Avoid committing sensitive Firebase credentials
+high-risk-loan-application-firebase-adminsdk-fbsvc-d87348da8f.json
+
+# Sign-in details file
+# This file may contain sensitive login information
+Sign_in_details.txt
+
+# Postman collection for High-Risk Loan API
+# Ignores Postman collections as they may contain environment-specific information
+High-Risk Loan API.postman_collection.json
