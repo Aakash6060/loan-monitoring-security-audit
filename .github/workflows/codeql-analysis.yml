@@ -1,4 +1,4 @@
-name: "CodeQL Analysis"
+name: CodeQL Analysis
 
 on:
   push:
@@ -13,23 +13,19 @@ jobs:
     permissions:
       actions: read
       contents: read
-      security-events: write 
-
-    strategy:
-      matrix:
-        language: [javascript, typescript] 
+      security-events: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
+          languages: javascript, typescript
 
-      - name: Autobuild project
-        uses: github/codeql-action/autobuild@v2
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
